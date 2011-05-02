@@ -11,11 +11,13 @@ Group:      System/Kernel and hardware
 URL:        http://tom.noflag.org.uk/cryptkeeper.html
 Source0:    http://tom.noflag.org.uk/cryptkeeper/%name-%version.tar.gz
 BuildRequires:  gtk+2-devel
+BuildRequires:  libGConf2-devel
 Requires:       encfs
 BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 Cryptkeeper is a Linux system tray applet that manages EncFS encrypted folders. 
+
 %prep
 %setup -q
 
