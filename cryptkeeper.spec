@@ -10,33 +10,30 @@ License:    GPLv3
 Group:      System/Kernel and hardware
 URL:        http://tom.noflag.org.uk/cryptkeeper.html
 Source0:    http://tom.noflag.org.uk/cryptkeeper/%name-%version.tar.gz
-BuildRequires:  gtk+2-devel
-BuildRequires:  libGConf2-devel
+BuildRequires:  pkgconfig(gtk+-2.0)
+BuildRequires:  pkgconfig(gconf-2.0)
 Requires:       encfs
-BuildRoot:      %{_tmppath}/%{name}-%{version}
+Patch0:		cryptkeeper-0.9.5-add-unistd-header.patch
+Patch1:		cryptkeeper-0.9.5-fix-linking.patch
 
 %description
 Cryptkeeper is a Linux system tray applet that manages EncFS encrypted folders. 
 
 %prep
 %setup -q
+%patch0 -p1
+%patch1 -p1
 
 %build
 %configure2_5x
-%__make
+%make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
 %find_lang %{name}
 
-%clean
-rm -rf %{buildroot}
-
 %files -f %{name}.lang
-%defattr(-,root,root)
 %{_bindir}/cryptkeeper
 %{_datadir}/applications/cryptkeeper.desktop
 %{_datadir}/pixmaps/cryptkeeper.png
-
