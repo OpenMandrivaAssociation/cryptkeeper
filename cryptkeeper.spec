@@ -1,6 +1,6 @@
 %define name    cryptkeeper
 %define version 0.9.5
-%define release %mkrel 1
+%define release 2
 
 Name:       %{name}
 Version:    %{version}
