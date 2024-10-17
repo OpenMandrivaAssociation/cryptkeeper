@@ -8,7 +8,7 @@ Release:    %{release}
 Summary:    System tray applet that manages EncFS encrypted folders
 License:    GPLv3
 Group:      System/Kernel and hardware
-URL:        http://tom.noflag.org.uk/cryptkeeper.html
+URL:        https://tom.noflag.org.uk/cryptkeeper.html
 Source0:    http://tom.noflag.org.uk/cryptkeeper/%name-%version.tar.gz
 BuildRequires:  pkgconfig(gtk+-2.0)
 BuildRequires:  pkgconfig(gconf-2.0)
