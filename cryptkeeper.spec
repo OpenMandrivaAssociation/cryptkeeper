@@ -10,6 +10,11 @@ License:    GPLv3
 Group:      System/Kernel and hardware
 URL:        https://tom.noflag.org.uk/cryptkeeper.html
 Source0:    http://tom.noflag.org.uk/cryptkeeper/%name-%version.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  pkgconfig(gtk+-2.0)
 BuildRequires:  pkgconfig(gconf-2.0)
 Requires:       encfs
